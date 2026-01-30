@@ -3,14 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>time</title>
+    <title>Dec time in minutes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
 </head>
 <body>
+<div class="form-container">
+    <div class="input-group">
+        <i class="fas fa-clock icon"></i>
+        <input type="number" id="isHours" placeholder="Часы" min="0" max="24">
+    </div>
 
-    <button onclick="GetValue()">
-        ПОЛУЧИТЬ ПАРАМЕТР <span >•••</span>
+    <div class="input-group">
+        <i class="fas fa-hourglass-half icon"></i>
+        <input type="number" id="isMinutes" placeholder="Минуты" min="0" max="59">
+    </div>
+
+    <button class="submit-button" onclick="GetValue()">
+        ПОЛУЧИТЬ ПАРАМЕТР <span class="dots">•••</span>
     </button>
 </div>
 </body>
