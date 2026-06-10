@@ -31,6 +31,21 @@ function GetValue() {
     const resultField = document.getElementById("result");
     if (resultField) {
         resultField.value = finalValue;
+
+        // Копирование в буфер обмена
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(finalValue).then(() => {
+                // Визуальное подтверждение (вспышка)
+                // Удаляем класс, если он уже был (для повторных кликов)
+                resultField.classList.remove("copy-flash");
+                // Триггерим перерисовку для перезапуска анимации
+                void resultField.offsetWidth;
+                // Добавляем класс анимации
+                resultField.classList.add("copy-flash");
+
+                console.log("Скопировано успешно: " + finalValue);
+            });
+        }
     }
     return finalValue;
 }
