@@ -26,8 +26,12 @@ function GetValue() {
     const finalValue = result.toFixed(2);
 
     // Выводим результат через сообщение Алерт
-    alert(finalValue);
-    
+    // Не работает в embede, очень плохо для портала тестировщика
+    //alert(finalValue);
+    const resultField = document.getElementById("result");
+    if (resultField) {
+        resultField.value = finalValue;
+    }
 	
     return finalValue;
 }

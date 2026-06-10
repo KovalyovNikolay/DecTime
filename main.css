@@ -79,3 +79,21 @@ body {
     font-size: 12px;
     opacity: 0.8;
 }
+
+.result-group {
+    margin-top: 15px;
+    opacity: 0.8; /* Общая тусклость блока */
+}
+
+#result {
+color: rgba(255, 255, 255, 0.5); /* Тусклый белый текст */
+background: rgba(255, 255, 255, 0.05); /* Более прозрачный фон */
+cursor: default;
+}
+
+/* Убираем яркую рамку при фокусе для readonly поля */
+#result:focus {
+outline: none;
+border-color: rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.05);
+}
