@@ -32,6 +32,5 @@ function GetValue() {
     if (resultField) {
         resultField.value = finalValue;
     }
-	
     return finalValue;
 }
