@@ -26,6 +26,7 @@ function GetValue() {
     const finalValue = result.toFixed(2);
 
     // Выводим результат через сообщение Алерт
+	// не работает в embeded. очень плохо для документации тестера...
     alert(finalValue);
     
 	
