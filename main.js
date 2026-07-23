@@ -3,7 +3,11 @@ function GetValue() {
 	// Получаем значения
     const hInput = document.getElementById("isHours");
     const mInput = document.getElementById("isMinutes");
+	const resultField = document.getElementById("result");
 
+	// Очистка мусора
+	if (resultField) {resultField.value = 0};
+	
     // Если элементы не найдены, выходим, чтобы не было ошибок
     if (!hInput || !mInput) return;
 
@@ -25,10 +29,9 @@ function GetValue() {
     // Округление до 2 знаков
     const finalValue = result.toFixed(2);
 
-    // Выводим результат через сообщение Алерт
-    // Не работает в embede, очень плохо для портала тестировщика
+    // Выводим результат через сообщение Алерт	
     //alert(finalValue);
-    const resultField = document.getElementById("result");
+    // Не работает в embede, очень плохо для портала тестировщика    
     if (resultField) {
         resultField.value = finalValue;
 
